@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Pacman: MonoBehaviour
 {
-    bool rightMovement = false;
+	bool rightMovement = false;
     bool leftMovement = false;
     bool forwardMovement = true;
     bool backMovement = false;
@@ -11,16 +11,19 @@ public class Pacman: MonoBehaviour
     public Transform spawnPoint;
     public AudioClip death;
     private AudioSource source;
+    private AudioSource sourci;
+    public AudioClip move;
+    bool playSound = true;
 
-    // Use this for initialization
     void Start()
     {
         source = GetComponent<AudioSource>();
+        sourci = GetComponent<AudioSource>();
     }
-    // Update is called once per frame
     void Update()
     {
-        AllWrong();
+        //To do list on bool true
+        IfTrue();
 
         if (Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.D))
         {
@@ -59,25 +62,43 @@ public class Pacman: MonoBehaviour
         }
     }
 
-    void AllWrong()
-    {
-        if (forwardMovement == true)
-            transform.Translate(Vector3.forward * Time.deltaTime * speed);
+    //All movement false
+       void AllFalse ()
+        {
+            forwardMovement = false;
+            backMovement = false;
+            leftMovement = false;
+            rightMovement = false;
+        }
 
-        if (backMovement == true)
-            transform.Translate(Vector3.back * Time.deltaTime * speed);
+        //This is a to do list
+        void IfTrue()
+        {
+            if (forwardMovement == true)
+                transform.Translate(Vector3.forward * Time.deltaTime * speed);
 
-        if (leftMovement == true)
-            transform.Translate(Vector3.left * Time.deltaTime * speed);
+            if (backMovement == true)
+                transform.Translate(Vector3.back * Time.deltaTime * speed);
 
-        if (rightMovement == true)
-            transform.Translate(Vector3.right * Time.deltaTime * speed);
+            if (leftMovement == true)
+                transform.Translate(Vector3.left * Time.deltaTime * speed);
+
+            if (rightMovement == true)
+                transform.Translate(Vector3.right * Time.deltaTime * speed);
+
+            if (playSound == true)
+                sourci.PlayOneShot(move, 1f);
     }
 
-    void OnCollisionEnter(Collision col)
-    {
+        //Teleportation och play sound on Enemy collide
+        void OnCollisionEnter(Collision col)
+        {
         if (col.gameObject.tag == "Enemy")
-            source.PlayOneShot(death, 1f);
+        {
             gameObject.transform.position = spawnPoint.transform.position;
-    }
+            source.PlayOneShot(death, 1f);
+            AllFalse();
+            sourci.mute = !sourci.mute;
+        }
+        }
 }
