@@ -18,7 +18,7 @@ public class GameBrain : MonoBehaviour { //Spelets hjärna som kommer ihåg allt
 	
 	void Start()
 	{
-		dots = 265;
+		dots = 266;
 		time = 5f;
 		startTime = false;
 		lives = 3;
@@ -34,17 +34,22 @@ public class GameBrain : MonoBehaviour { //Spelets hjärna som kommer ihåg allt
 					if( dots == 0) // När det inte finns några Dots kvar vinner pac man.
 							{
 								Win();
+								new ToggleTheTime();
+					Time.timeScale = 0f;
 							}
 
 							if(lives == 0) //Pac Man dör om han förlorar alla sina liv.
 							{
 								Fail ();
+								new ToggleTheTime();
+					Time.timeScale = 0f;
 							}
 
 							if(time >= 180f) //om tiden blir noll förlorar spelaren.
 							{
 								Fail ();
 								new ToggleTheTime();
+					Time.timeScale = 0f;
 							}
 
 							if(startTime == true) //när startTime är på börjar timern.
@@ -60,6 +65,10 @@ public class GameBrain : MonoBehaviour { //Spelets hjärna som kommer ihåg allt
 
 		time += Time.deltaTime;
 
+	}
+	public void ScoreBonus()
+	{
+		score = score + 200;
 	}
 
 	public void ScoreDots() //Denna metod ska anropas när pac man äter upp en dot.
@@ -78,7 +87,7 @@ public class GameBrain : MonoBehaviour { //Spelets hjärna som kommer ihåg allt
 		score = 0;
 		lives = 3;
 		time = 0;
-		dots = 265;
+		dots = 266;
 		win = false;
 		
 		failure = false;
@@ -136,6 +145,9 @@ public class GameBrain : MonoBehaviour { //Spelets hjärna som kommer ihåg allt
 	{
 		return(gameStarted);
 	}
-
+	public int HowManyDots()
+	{
+		return(dots);
+	}
 	
 }
