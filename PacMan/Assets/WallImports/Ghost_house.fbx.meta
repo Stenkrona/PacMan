@@ -1,0 +1,136 @@
+fileFormatVersion: 2
+guid: 156102ac85111c94cbdc7a45d6a07808
+timeCreated: 1446667470
+licenseType: Free
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Ghost_house
+    100004: group4
+    100006: group5
+    100008: group6
+    100010: group7
+    100012: group8
+    100014: pasted__group1
+    100016: pasted__group4
+    100018: pasted__group4 1
+    100020: pasted__group6
+    100022: pasted__pasted__group
+    100024: pasted__pasted__group4
+    100026: pasted__pasted__pasted__pCube1
+    100028: pasted__pasted__pasted__pCube2
+    100030: pasted__pasted__pasted__pCube3
+    100032: pasted__pasted__pasted__pCube4
+    100034: pasted__pasted__pCube1
+    100036: pasted__pasted__pCube1 1
+    100038: pasted__pCube1
+    400000: //RootNode
+    400002: Ghost_house
+    400004: group4
+    400006: group5
+    400008: group6
+    400010: group7
+    400012: group8
+    400014: pasted__group1
+    400016: pasted__group4
+    400018: pasted__group4 1
+    400020: pasted__group6
+    400022: pasted__pasted__group
+    400024: pasted__pasted__group4
+    400026: pasted__pasted__pasted__pCube1
+    400028: pasted__pasted__pasted__pCube2
+    400030: pasted__pasted__pasted__pCube3
+    400032: pasted__pasted__pasted__pCube4
+    400034: pasted__pasted__pCube1
+    400036: pasted__pasted__pCube1 1
+    400038: pasted__pCube1
+    2300000: Ghost_house
+    2300002: pasted__pasted__pasted__pCube1
+    2300004: pasted__pasted__pasted__pCube2
+    2300006: pasted__pasted__pasted__pCube3
+    2300008: pasted__pasted__pasted__pCube4
+    2300010: pasted__pasted__pCube1
+    2300012: pasted__pasted__pCube1 1
+    2300014: pasted__pCube1
+    3300000: Ghost_house
+    3300002: pasted__pasted__pasted__pCube1
+    3300004: pasted__pasted__pasted__pCube2
+    3300006: pasted__pasted__pasted__pCube3
+    3300008: pasted__pasted__pasted__pCube4
+    3300010: pasted__pasted__pCube1
+    3300012: pasted__pasted__pCube1 1
+    3300014: pasted__pCube1
+    4300000: pasted__pCube1
+    4300002: Ghost_house
+    4300004: pasted__pasted__pasted__pCube2
+    4300006: pasted__pasted__pasted__pCube3
+    4300008: pasted__pasted__pasted__pCube4
+    4300010: pasted__pasted__pCube1
+    4300012: pasted__pasted__pasted__pCube1
+    4300014: pasted__pasted__pCube1
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
