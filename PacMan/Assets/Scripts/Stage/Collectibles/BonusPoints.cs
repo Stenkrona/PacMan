@@ -17,23 +17,28 @@ public class BonusPoints : MonoBehaviour {
 	public float randomTime;
 
 	public bool isBonus;
+
+	private float min;
+	private float max;
 	
 
 
 	void Start () {
 
-
+		min = 25;
+		max = 35;
 		d = 220;
 
 		isBonus = false;
 
 		gb = GameObject.Find ("GameBrain").GetComponent<GameBrain>();
-		randomTime = Random.Range(25f,30f);
 	
 	}
 	
 
 	void Update () {
+
+		randomTime = Random.Range(min,max);
 
 		time = gb.WhatTime();
 
@@ -41,7 +46,7 @@ public class BonusPoints : MonoBehaviour {
 		{
 			Debug.Log ("hej");
 			SpawnBonusPoints();
-			ChangeDotTerms();
+			ChangeTerms();
 		}
 
 	
@@ -54,9 +59,12 @@ public class BonusPoints : MonoBehaviour {
 
 		Instantiate(bonusItems[i], locations[r].position, Quaternion.identity);
 	}
-	void ChangeDotTerms()
+	void ChangeTerms()
 	{
 		d = d - 50;
+
+		min = min + 20f;
+		max = max + 20f;
 	}
 	public void IsBonusItem()
 	{
