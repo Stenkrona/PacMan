@@ -6,6 +6,7 @@ public class BonusPoints : MonoBehaviour {
 
 	public List<Transform> locations;
 	public List<GameObject> bonusItems;
+	public List<Sprite> numbers;
 	
 	private int r;
 	private int i;
